@@ -1,0 +1,3 @@
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"tdd"}
+{"t":0,"agent":"aa3bf09","agent_type":"python-reviewer","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"aa3bf09","agent_type":"python-reviewer","event":"agent_stop","success":true,"duration_ms":180910}

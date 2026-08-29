@@ -1,0 +1,17 @@
+{
+  "agents": [
+    {
+      "agent_id": "aa3bf0983408048c2",
+      "agent_type": "python-reviewer",
+      "started_at": "2026-08-29T11:53:08.361Z",
+      "parent_mode": "none",
+      "status": "completed",
+      "completed_at": "2026-08-29T11:56:09.271Z",
+      "duration_ms": 180910
+    }
+  ],
+  "total_spawned": 1,
+  "total_completed": 1,
+  "total_failed": 0,
+  "last_updated": "2026-08-29T11:56:09.273Z"
+}

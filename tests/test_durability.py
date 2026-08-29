@@ -98,7 +98,7 @@ def test_cli_json_smoke(tmp_path):
     )
     assert proc.returncode == 1
     payload = json.loads(proc.stdout)
-    assert isinstance(payload, list) and len(payload) == 1
-    assert set(payload[0]) == {"rule", "severity", "line", "message"}
-    assert payload[0]["rule"] == r.ID
-    assert payload[0]["severity"] == "high"
+    assert len(payload["findings"]) == 1
+    assert set(payload["findings"][0]) == {"rule", "severity", "line", "message"}
+    assert payload["findings"][0]["rule"] == r.ID
+    assert payload["findings"][0]["severity"] == "high"
