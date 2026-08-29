@@ -2,7 +2,7 @@
 
 import os
 
-from . import scope
+from . import inline_ignore, scope
 from .model import InternalError, Rule, RunItem, RunResult
 from .rules import ALL
 
@@ -15,6 +15,7 @@ _PRUNE = {".git", "__pycache__"}
 def run(root: str) -> RunResult:
     items = []
     errors = []
+    suppressed = {}
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in _PRUNE]
         for name in filenames:
@@ -32,6 +33,7 @@ def run(root: str) -> RunResult:
                 # UnicodeDecodeError (GBK/other non-UTF8 inputs) is a ValueError, not OSError.
                 errors.append(InternalError(file=rel, rule=",".join(ids), message=f"read failed: {exc}"))
                 continue
+            protected = inline_ignore.resolve(text)
             for rid in ids:
                 rule: Rule = REGISTRY.get(rid)
                 if rule is None:
@@ -39,7 +41,10 @@ def run(root: str) -> RunResult:
                     continue
                 try:
                     for violation in rule.run(text):
-                        items.append(RunItem(file=rel, violation=violation))
+                        if inline_ignore.suppresses(protected, violation.line, rid):
+                            suppressed[rid] = suppressed.get(rid, 0) + 1
+                        else:
+                            items.append(RunItem(file=rel, violation=violation))
                 except Exception as exc:  # rule crash != violation
                     errors.append(InternalError(file=rel, rule=rid, message=f"rule crashed: {exc}"))
-    return RunResult(items=items, errors=errors)
+    return RunResult(items=items, errors=errors, suppressed=suppressed)

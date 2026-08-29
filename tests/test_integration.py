@@ -65,8 +65,8 @@ def test_mixed_all_violations_exit_one(tmp_path):
     r = _cli(tmp_path)
     assert r.returncode == 1
     payload = json.loads(_cli(tmp_path, "--json").stdout)
-    assert isinstance(payload, list) and len(payload) > 0
-    assert all(set(v) == {"rule", "severity", "line", "message"} for v in payload)
+    assert len(payload["findings"]) > 0
+    assert all(set(v) == {"rule", "severity", "line", "message"} for v in payload["findings"])
 
 
 def test_errors_trump_violations_exit_two(tmp_path):
@@ -87,7 +87,7 @@ def test_json_mode_still_surfaces_internal_error(tmp_path):
     r = _cli(tmp_path, "--json")
     assert r.returncode == 2
     assert "internal error" in r.stderr
-    assert r.stdout.strip() == "[]"  # no violations under --json, error on stderr only
+    assert json.loads(r.stdout) == {"findings": [], "suppressed": {}}  # no violations, error on stderr only
 
 
 def test_crashing_rule_does_not_abort_batch(tmp_path, monkeypatch):

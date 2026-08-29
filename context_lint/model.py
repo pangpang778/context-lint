@@ -1,6 +1,6 @@
 """Core data shapes shared by the engine and rules (stdlib only)."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Callable
 
 
@@ -38,6 +38,7 @@ class InternalError:
 class RunResult:
     items: list
     errors: list
+    suppressed: dict = field(default_factory=dict)  # rule -> count of dropped findings
 
 
 @dataclass(frozen=True)

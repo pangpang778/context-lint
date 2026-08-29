@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2026-08-29T11:56:09.271Z",
+  "missions": [
+    {
+      "id": "session:b4906e4b-316a-4261-8211-c56fa39594ad:none",
+      "source": "session",
+      "name": "none",
+      "objective": "Session mission",
+      "createdAt": "2026-08-29T11:53:08.361Z",
+      "updatedAt": "2026-08-29T11:56:09.271Z",
+      "status": "done",
+      "workerCount": 1,
+      "taskCounts": {
+        "total": 1,
+        "pending": 0,
+        "blocked": 0,
+        "inProgress": 0,
+        "completed": 1,
+        "failed": 0
+      },
+      "agents": [
+        {
+          "name": "python-reviewer:aa3bf09",
+          "role": "python-reviewer",
+          "ownership": "aa3bf0983408048c2",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-08-29T11:56:09.271Z"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "session-start:aa3bf0983408048c2:2026-08-29T11:53:08.361Z",
+          "at": "2026-08-29T11:53:08.361Z",
+          "kind": "update",
+          "agent": "python-reviewer:aa3bf09",
+          "detail": "started python-reviewer:aa3bf09",
+          "sourceKey": "session-start:aa3bf0983408048c2"
+        },
+        {
+          "id": "session-stop:aa3bf0983408048c2:2026-08-29T11:56:09.271Z",
+          "at": "2026-08-29T11:56:09.271Z",
+          "kind": "completion",
+          "agent": "python-reviewer:aa3bf09",
+          "detail": "completed",
+          "sourceKey": "session-stop:aa3bf0983408048c2"
+        }
+      ]
+    }
+  ]
+}

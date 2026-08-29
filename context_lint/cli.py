@@ -21,7 +21,11 @@ def main(argv=None) -> int:
     exit_code = EXIT_ERROR if result.errors else (EXIT_VIOLATIONS if result.items else EXIT_CLEAN)
 
     if args.json:
-        print(json.dumps([it.violation.to_dict() for it in result.items], ensure_ascii=False, indent=2))
+        payload = {
+            "findings": [it.violation.to_dict() for it in result.items],
+            "suppressed": result.suppressed,
+        }
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:
         for it in result.items:
             v = it.violation

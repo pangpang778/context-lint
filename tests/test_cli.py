@@ -1,3 +1,4 @@
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -21,10 +22,10 @@ def test_clean_root_exits_zero(tmp_path):
     assert r.stdout == ""
 
 
-def test_clean_root_json_is_empty_list(tmp_path):
+def test_clean_root_json_is_empty_object(tmp_path):
     r = _run(tmp_path, "--json")
     assert r.returncode == 0
-    assert r.stdout.strip() == "[]"
+    assert json.loads(r.stdout) == {"findings": [], "suppressed": {}}
 
 
 def test_violation_exits_one(tmp_path):
@@ -43,9 +44,9 @@ def test_json_shape(tmp_path):
     )
     r = _run(tmp_path, "--json")
     assert r.returncode == 1
-    payload = __import__("json").loads(r.stdout)
-    assert isinstance(payload, list) and len(payload) == 1
-    assert set(payload[0]) == {"rule", "severity", "line", "message"}
+    payload = json.loads(r.stdout)
+    assert len(payload["findings"]) == 1
+    assert set(payload["findings"][0]) == {"rule", "severity", "line", "message"}
 
 
 def test_root_flag_scans_other_dir(tmp_path):

@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python -m pytest -q 2>&1 | tail -6 && echo \\\"---manual demo on fixture---\\\" && python -m context_lint --root tests/fixtures/inline_ignore --json && echo \\\"---exit=$?---\\\" && python -m cont...",
+  "error": "Exit code 1\n........................................................................ [ 96%]\r\n...                                                                      [100%]\r\n75 passed in 2.03s\r\n---manual demo on fixture---\n{\r\n  \"findings\": [\r\n    {\r\n      \"rule\": \"context-md/entry-format\",\r\n      \"severity\": \"low\",\r\n      \"line\": 10,\r\n      \"message\": \"entry 'unsuppressed-entry' missing required label '已解决的歧义:'\"\r\n    },\r\n    {\r\n      \"rule\": \"durability/spec-coordinates\",\r\n      \"severity\": \"hig...",
+  "timestamp": "2026-08-29T11:52:55.060Z",
+  "retry_count": 1
+}
