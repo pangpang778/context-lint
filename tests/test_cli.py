@@ -16,6 +16,14 @@ def _run(root, *extra):
     )
 
 
+def _bad_high(root):
+    # One durability/spec-coordinates violation (severity high) on line 1.
+    p = root / "specs" / "a.md"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text("Ref src/store.js here.\n", encoding="utf-8")
+    return p
+
+
 def test_clean_root_exits_zero(tmp_path):
     r = _run(tmp_path)
     assert r.returncode == 0
@@ -29,19 +37,16 @@ def test_clean_root_json_is_empty_object(tmp_path):
 
 
 def test_violation_exits_one(tmp_path):
-    (tmp_path / "CONTEXT.md").write_text(
-        "## rule（规则）\n- 定义: a\n- 边界: b\n", encoding="utf-8"
-    )
+    # a surviving high finding drives exit 1 under the severity gate.
+    _bad_high(tmp_path)
     r = _run(tmp_path)
     assert r.returncode == 1
-    assert "context-md/entry-format" in r.stdout
-    assert "CONTEXT.md:1" in r.stdout
+    assert "durability/spec-coordinates" in r.stdout
+    assert "specs/a.md:1" in r.stdout
 
 
 def test_json_shape(tmp_path):
-    (tmp_path / "CONTEXT.md").write_text(
-        "## rule（规则）\n- 定义: a\n- 边界: b\n", encoding="utf-8"
-    )
+    _bad_high(tmp_path)
     r = _run(tmp_path, "--json")
     assert r.returncode == 1
     payload = json.loads(r.stdout)
@@ -50,10 +55,10 @@ def test_json_shape(tmp_path):
 
 
 def test_root_flag_scans_other_dir(tmp_path):
-    # --root default is cwd; an explicit --root to a dir with a bad CONTEXT.md drives it.
+    # --root default is cwd; an explicit --root to a dir with a bad (high) file drives it.
     other = tmp_path / "target"
     other.mkdir()
-    (other / "CONTEXT.md").write_text("## no-fields-here\n", encoding="utf-8")
+    _bad_high(other)
     r = _run(other)
     assert r.returncode == 1
 

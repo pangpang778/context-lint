@@ -60,68 +60,86 @@
   "hotPaths": [
     {
       "path": "context_lint/engine.py",
-      "accessCount": 16,
-      "lastAccessed": 1788005748341,
-      "type": "file"
-    },
-    {
-      "path": "context_lint/model.py",
-      "accessCount": 14,
-      "lastAccessed": 1788005748637,
-      "type": "file"
-    },
-    {
-      "path": "context_lint/rules/durability.py",
-      "accessCount": 13,
-      "lastAccessed": 1788004445943,
+      "accessCount": 22,
+      "lastAccessed": 1788007640858,
       "type": "file"
     },
     {
       "path": "context_lint/cli.py",
-      "accessCount": 13,
-      "lastAccessed": 1788005932421,
+      "accessCount": 19,
+      "lastAccessed": 1788007530495,
       "type": "file"
     },
     {
-      "path": "context_lint/rules/context_md.py",
-      "accessCount": 12,
-      "lastAccessed": 1788005537945,
+      "path": "context_lint/model.py",
+      "accessCount": 17,
+      "lastAccessed": 1788007538842,
       "type": "file"
     },
     {
       "path": "tests/test_cli.py",
-      "accessCount": 11,
-      "lastAccessed": 1788005487661,
+      "accessCount": 16,
+      "lastAccessed": 1788007534210,
+      "type": "file"
+    },
+    {
+      "path": "context_lint/rules/durability.py",
+      "accessCount": 15,
+      "lastAccessed": 1788007552249,
+      "type": "file"
+    },
+    {
+      "path": "context_lint/rules/context_md.py",
+      "accessCount": 13,
+      "lastAccessed": 1788006791665,
+      "type": "file"
+    },
+    {
+      "path": "context_lint/config_file.py",
+      "accessCount": 13,
+      "lastAccessed": 1788007658307,
       "type": "file"
     },
     {
       "path": "context_lint/scope.py",
-      "accessCount": 9,
-      "lastAccessed": 1788005284850,
+      "accessCount": 12,
+      "lastAccessed": 1788007546046,
       "type": "file"
     },
     {
-      "path": "tests/test_integration.py",
-      "accessCount": 8,
-      "lastAccessed": 1788004299293,
+      "path": "tests/test_config_file.py",
+      "accessCount": 10,
+      "lastAccessed": 1788006786160,
       "type": "file"
     },
     {
       "path": "context_lint/rules/claude_md.py",
-      "accessCount": 8,
-      "lastAccessed": 1788004492664,
+      "accessCount": 9,
+      "lastAccessed": 1788006792263,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_integration.py",
+      "accessCount": 9,
+      "lastAccessed": 1788006858213,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_baseline_cli.py",
+      "accessCount": 9,
+      "lastAccessed": 1788007534580,
+      "type": "file"
+    },
+    {
+      "path": "context_lint/rules/__init__.py",
+      "accessCount": 9,
+      "lastAccessed": 1788007551976,
       "type": "file"
     },
     {
       "path": "tests/test_context_md.py",
       "accessCount": 7,
       "lastAccessed": 1787989839179,
-      "type": "file"
-    },
-    {
-      "path": "context_lint/rules/__init__.py",
-      "accessCount": 7,
-      "lastAccessed": 1788003868369,
       "type": "file"
     },
     {
@@ -132,26 +150,44 @@
     },
     {
       "path": "tests/test_engine.py",
-      "accessCount": 6,
-      "lastAccessed": 1788003867845,
+      "accessCount": 7,
+      "lastAccessed": 1788006778966,
       "type": "file"
     },
     {
-      "path": "docs/standards/data.md",
-      "accessCount": 5,
-      "lastAccessed": 1787989970166,
+      "path": "context_lint/baseline.py",
+      "accessCount": 7,
+      "lastAccessed": 1788007539360,
       "type": "file"
     },
     {
       "path": "context_lint/inline_ignore.py",
-      "accessCount": 5,
-      "lastAccessed": 1788004595963,
+      "accessCount": 7,
+      "lastAccessed": 1788007539621,
+      "type": "file"
+    },
+    {
+      "path": "docs/standards/data.md",
+      "accessCount": 6,
+      "lastAccessed": 1788006188398,
       "type": "file"
     },
     {
       "path": "context_lint/__main__.py",
       "accessCount": 5,
       "lastAccessed": 1788005794934,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_baseline.py",
+      "accessCount": 5,
+      "lastAccessed": 1788007251281,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 5,
+      "lastAccessed": 1788007542559,
       "type": "file"
     },
     {
@@ -167,21 +203,15 @@
       "type": "file"
     },
     {
-      "path": "context_lint/baseline.py",
+      "path": "tests/test_inline_ignore_e2e.py",
       "accessCount": 4,
-      "lastAccessed": 1788005931992,
+      "lastAccessed": 1788006858881,
       "type": "file"
     },
     {
-      "path": "tests/test_baseline.py",
+      "path": "tests/test_baseline_e2e.py",
       "accessCount": 4,
-      "lastAccessed": 1788005947011,
-      "type": "file"
-    },
-    {
-      "path": "tests/test_baseline_cli.py",
-      "accessCount": 4,
-      "lastAccessed": 1788005947034,
+      "lastAccessed": 1788007233312,
       "type": "file"
     },
     {
@@ -191,15 +221,21 @@
       "type": "file"
     },
     {
-      "path": "tests/test_inline_ignore_e2e.py",
-      "accessCount": 3,
-      "lastAccessed": 1788005285189,
-      "type": "file"
-    },
-    {
       "path": "tests/fixtures/inline_ignore/CONTEXT.md",
       "accessCount": 3,
       "lastAccessed": 1788005538285,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_inline_ignore_engine.py",
+      "accessCount": 3,
+      "lastAccessed": 1788006859274,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_config_file_engine.py",
+      "accessCount": 3,
+      "lastAccessed": 1788007533601,
       "type": "file"
     },
     {
@@ -221,12 +257,6 @@
       "type": "directory"
     },
     {
-      "path": "tests/test_inline_ignore_engine.py",
-      "accessCount": 2,
-      "lastAccessed": 1788004403267,
-      "type": "file"
-    },
-    {
       "path": "tests/fixtures/inline_ignore/specs/a.md",
       "accessCount": 2,
       "lastAccessed": 1788004408305,
@@ -239,10 +269,10 @@
       "type": "file"
     },
     {
-      "path": "tests/test_baseline_e2e.py",
+      "path": "context_lint/rules",
       "accessCount": 2,
-      "lastAccessed": 1788005742659,
-      "type": "file"
+      "lastAccessed": 1788006178716,
+      "type": "directory"
     },
     {
       "path": "CONTEXT.md",
@@ -269,16 +299,16 @@
       "type": "file"
     },
     {
-      "path": "README.md",
-      "accessCount": 1,
-      "lastAccessed": 1788005711737,
-      "type": "file"
-    },
-    {
       "path": "tests",
       "accessCount": 1,
       "lastAccessed": 1788005940053,
       "type": "directory"
+    },
+    {
+      "path": "tests/fixtures/baseline/specs/a.md",
+      "accessCount": 1,
+      "lastAccessed": 1788007423686,
+      "type": "file"
     }
   ],
   "userDirectives": []

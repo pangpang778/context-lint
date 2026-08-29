@@ -1,7 +1,36 @@
 # context-lint
 
 Lint shipyard-harness markdown discipline (stdlib-only, pytest). Read-only audit:
-exit **0** clean, **1** violations, **2** usage/internal error.
+exit **0** clean or low-severity-only, **1** a surviving **high-severity**
+violation, **2** usage/internal/config error.
+
+## Configuration — `.context-lint.json`
+
+An optional file at the scanned root tunes two controls. A missing file is an
+empty configuration; the tool runs exactly as before.
+
+```json
+{
+  "ignore": ["rule-id"],
+  "severityOverrides": { "rule-id": "high" }
+}
+```
+
+- **`ignore`** — a rule-id list. Ignored rules are disabled outright: they
+  produce no findings, appear nowhere in output, and never fail the run.
+- **`severityOverrides`** — a rule-id → `"high"`/`"low"` map. Every finding of
+  that rule is re-judged at the new severity in both human and `--json` output,
+  and at the exit gate. A rule in both maps is ignored (the override is moot).
+
+**Exit semantics.** A finding's severity now decides the gate: exit **1** fires
+only when a surviving, non-exempt finding is severity `high`. `low` findings are
+still reported but no longer fail the run. "Non-exempt" composes the exemption
+stacks — config `ignore`, inline suppression, and a baseline match.
+
+**Bad config never fails silently.** Malformed JSON, a non-object root, an
+unknown rule id, a non-`high`/`low` severity value, or an unknown top-level key
+each exit **2** with a `config error:` line on stderr naming the problem (and
+the offending id). Use `{}` for an empty config.
 
 ```
 python -m context_lint --root <repo>
@@ -50,7 +79,7 @@ stable, so line edits (drift) don't invalidate a match. `relpath` is relative to
 |-----------|------|
 | `--baseline-generate` (capture) | 0 — even with violations |
 | `--baseline`, no new violations | 0 |
-| `--baseline`, ≥ 1 new violation | 1 |
+| `--baseline`, ≥ 1 new high-severity violation | 1 |
 | missing / malformed / wrong-version baseline | 2 |
 | `--baseline` + `--baseline-generate` together | 2 |
 

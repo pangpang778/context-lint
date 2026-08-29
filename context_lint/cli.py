@@ -11,6 +11,7 @@ import sys
 from datetime import datetime, timezone
 
 from . import baseline
+from .config_file import ConfigError
 from .engine import run as run_engine
 
 EXIT_CLEAN = 0
@@ -36,7 +37,11 @@ def main(argv=None) -> int:
     )
     args = parser.parse_args(argv)
 
-    result = run_engine(args.root)
+    try:
+        result = run_engine(args.root)
+    except ConfigError as exc:
+        print(f"config error: {exc}", file=sys.stderr)
+        return EXIT_ERROR
 
     # --- generate mode: capture, exit 0 regardless of violations -----------------
     if args.baseline_generate:
@@ -71,7 +76,10 @@ def main(argv=None) -> int:
         violating_items = result.items
         matched_set = set()
 
-    exit_code = EXIT_ERROR if result.errors else (EXIT_VIOLATIONS if violating_items else EXIT_CLEAN)
+    # exit 1 only when a surviving, non-exempt finding is severity "high" after override.
+    exit_code = EXIT_ERROR if result.errors else (
+        EXIT_VIOLATIONS if any(it.violation.severity == "high" for it in violating_items) else EXIT_CLEAN
+    )
 
     if args.json:
         payload = {

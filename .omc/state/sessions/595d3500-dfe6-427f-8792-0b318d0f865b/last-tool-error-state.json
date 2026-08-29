@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"C:\\\\Users\\\\Administrator\\\\orca\\\\context-lint\\\\context_lint\\\\rules.py\"}",
+  "error": "File does not exist. Note: your current working directory is C:\\Users\\Administrator\\orca\\context-lint. Did you mean rules?",
+  "timestamp": "2026-08-29T12:45:45.707Z",
+  "retry_count": 1
+}
