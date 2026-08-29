@@ -7,3 +7,6 @@
 ## 与 shipyard 的关系
 - 本工具机械化 launch 的耐久门禁与 harness 格式契约；发现的规则缺口回灌 shipyard-log 的 findings
 - 与 sy check 分工：sy 管文件图（存在性/指针），context-lint 管散文内容（格式/纪律）
+
+## 编码政策
+- context-lint 对非 UTF-8 文件一律拒绝（internal error），永不猜测转码——诚实失败优于静默改写（Run 4 C5 D2）。

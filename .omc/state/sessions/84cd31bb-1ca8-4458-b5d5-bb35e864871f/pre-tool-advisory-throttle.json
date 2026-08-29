@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "entries": {
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1787990590983,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1787990535994,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1787990422459,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "459c54e5f35d6a58dcd90d2aecc21fa6d1f35d241bc5b134c506f87dc7b6d67b": {
+      "last_emitted_at_ms": 1787990320976,
+      "message": "Combine searches in parallel when investigating multiple patterns."
+    },
+    "8ce4ba6120ae939f490f9d6ae9c648e7303cd887d68af6b4a47eee066d7486fa": {
+      "last_emitted_at_ms": 1787990299938,
+      "message": "Spawning agent: ecc:code-reviewer (sonnet) | Task: Review T4 integration slice | Active agents: 2"
+    },
+    "544a366d734487d34852fb2a6397dcb8e47cc699c5f3b2e39ffd4ab661faac6e": {
+      "last_emitted_at_ms": 1787990264075,
+      "message": "Spawning agent: ecc:code-reviewer (sonnet) | Task: Review T2 durability slice | Active agents: 1"
+    },
+    "9bd90b2fba7e6924b48e1d75e8d5d59f4db2cd6fdfb6a6f73c5eaaaded19db05": {
+      "last_emitted_at_ms": 1787989962530,
+      "message": "Spawning agent: ecc:code-reviewer (sonnet) | Task: Independent review of T2 rule + tests | Active agents: 1"
+    },
+    "fe62649d58d82f38c15423eacbdd54d72920acf18787636f05f92b2896df5517": {
+      "last_emitted_at_ms": 1787989813355,
+      "message": "Spawning agent: ecc:code-reviewer (sonnet) | Task: Independent review of T3 rule | Active agents: 2"
+    },
+    "7cc0706dae9d87dbc7f73b8c06d4e7c4483b1a1e5f4122cf30a2a07aa4320378": {
+      "last_emitted_at_ms": 1787989710263,
+      "message": "Spawning agent: general-purpose (sonnet) | Task: T3: claude-md/sections | Active agents: 1"
+    },
+    "c43d1bdec84c05ea654fe59425aec20cde62fe14dc7d9c9a7e7102e371c6b360": {
+      "last_emitted_at_ms": 1787989700653,
+      "message": "Spawning agent: general-purpose (sonnet) | Task: T2: durability/spec-coordinates"
+    },
+    "f763f051842b063a9a86568985e68551ab7cc31f6d38a680ee86a52c85c0770d": {
+      "last_emitted_at_ms": 1787989215336,
+      "message": "Spawning agent: ecc:code-reviewer (sonnet) | Task: Code review T1 scaffold"
+    },
+    "cc0347b44fb47f16435274f386b970e7d027bcd610e64dbdf7075410b1f1450e": {
+      "last_emitted_at_ms": 1787989206253,
+      "message": "Spawning agent: code-reviewer (sonnet) | Task: Code review T1 scaffold"
+    }
+  },
+  "updated_at": "2026-08-29T08:03:10.983Z"
+}

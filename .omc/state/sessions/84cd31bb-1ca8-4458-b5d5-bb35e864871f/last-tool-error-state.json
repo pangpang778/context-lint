@@ -1,0 +1,7 @@
+{
+  "tool_name": "Agent",
+  "tool_input_preview": "{\"description\":\"Code review T1 scaffold\",\"prompt\":\"You are the reviewer on a shipyard launch pipeline. The implementer (not you) has built vertical slice T1 and MUST NOT self-approve — your verdict de...",
+  "error": "Agent type 'code-reviewer' not found. Available agents: a11y-architect, build-error-resolver, chief-of-staff, claude, code-architect, code-explorer, comment-analyzer, conversation-analyzer, cpp-build-resolver, cpp-reviewer, csharp-reviewer, dart-build-resolver, database-reviewer, doc-updater, docs-lookup, e2e-runner, ecc:a11y-architect, ecc:agent-evaluator, ecc:architect, ecc:build-error-resolver, ecc:chief-of-staff, ecc:code-architect, ecc:code-explorer, ecc:code-reviewer, ecc:code-simplifier, ...",
+  "timestamp": "2026-08-29T07:40:06.518Z",
+  "retry_count": 1
+}
