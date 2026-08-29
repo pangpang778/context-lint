@@ -29,6 +29,14 @@ def _bad_context(tmp_path):
     return p
 
 
+def _bad_spec(tmp_path, name="a.md"):
+    # One durability/spec-coordinates violation (severity high) on line 1.
+    p = tmp_path / "specs" / name
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text("Ref src/store.js here.\n", encoding="utf-8")
+    return p
+
+
 def test_generate_exits_zero_with_violations(tmp_path):
     _bad_context(tmp_path)
     base = tmp_path / "base.json"
@@ -75,20 +83,20 @@ def test_compare_clean_exits_zero_and_marks(tmp_path):
 
 
 def test_compare_new_violation_exits_one(tmp_path):
-    _bad_context(tmp_path)
+    # a NEW high finding fails the severity gate even in baseline mode
+    _bad_spec(tmp_path, "a.md")
     base = tmp_path / "base.json"
     assert _run(tmp_path, "--baseline-generate", str(base)).returncode == 0
-    # add a second violating entry -> one matched, one new
-    with open(tmp_path / "CONTEXT.md", "a", encoding="utf-8") as fh:
-        fh.write("## new-entry（新增）\n- 定义: a\n- 边界: b\n")
+    # add a second file -> one matched, one new (high)
+    _bad_spec(tmp_path, "b.md")
     r = _run(tmp_path, "--baseline", str(base))
     assert r.returncode == 1
     assert r.stdout.count("[baseline]") == 1  # only the frozen one is marked
-    assert "new-entry" in r.stdout
+    assert "specs/b.md" in r.stdout
 
 
 def test_compare_no_match_exits_one(tmp_path):
-    _bad_context(tmp_path)
+    _bad_spec(tmp_path)
     base = tmp_path / "empty.json"
     base.write_text(json.dumps({"version": 1, "violations": []}), encoding="utf-8")
     r = _run(tmp_path, "--baseline", str(base))

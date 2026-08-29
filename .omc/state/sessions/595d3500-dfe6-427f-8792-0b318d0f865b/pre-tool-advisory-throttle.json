@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "entries": {
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1788007662809,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1788007640484,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "459c54e5f35d6a58dcd90d2aecc21fa6d1f35d241bc5b134c506f87dc7b6d67b": {
+      "last_emitted_at_ms": 1788007548831,
+      "message": "Combine searches in parallel when investigating multiple patterns."
+    },
+    "37a0d054e4711aa90b6c826cbd928ebc810d6cdc620dc4462034c5d74a3ee5f0": {
+      "last_emitted_at_ms": 1788007526818,
+      "message": "Spawning agent: python-reviewer (opus) | Task: Review T2/T3 config wiring | Active agents: 1"
+    },
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1788007457485,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "c797afe7234d79870a788cb191de5944c75daa03984342acc6bae27c2dc8d972": {
+      "last_emitted_at_ms": 1788006766443,
+      "message": "Spawning agent: general-purpose (sonnet) | Task: Implement T2 engine apply + CLI exit-gate"
+    },
+    "d1c8fae0bb75a6e384f62a9d8ab87d0eed041261f67f8741689c478bc412522a": {
+      "last_emitted_at_ms": 1788006567677,
+      "message": "Spawning agent: python-reviewer (sonnet) | Task: Review T1 config loader"
+    },
+    "7432f7cf9b1f8c7d282b051b62cc138991c240b234205e32fac229d908b73a2c": {
+      "last_emitted_at_ms": 1788006488985,
+      "message": "Spawning agent: general-purpose (sonnet) | Task: Implement T1 config loader"
+    }
+  },
+  "updated_at": "2026-08-29T12:47:42.809Z"
+}

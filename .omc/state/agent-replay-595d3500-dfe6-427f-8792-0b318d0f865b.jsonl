@@ -1,0 +1,8 @@
+{"t":0,"agent":"system","event":"keyword_detected","keyword":"tdd"}
+{"t":0,"agent":"a32e231","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a32e231","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":67754}
+{"t":0,"agent":"a137812","agent_type":"python-reviewer","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a137812","agent_type":"python-reviewer","event":"agent_stop","success":true,"duration_ms":76341}
+{"t":0,"agent":"a610c4e","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ae25eb1","agent_type":"python-reviewer","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"ae25eb1","agent_type":"python-reviewer","event":"agent_stop","success":true,"duration_ms":99313}

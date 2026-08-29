@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git status --short 2>&1 | grep -v '^?? .omc/state' ; echo \\\"--- test files count ---\\\"; ls tests/test_config_file*.py\",\"description\":\"Final working-tree summary\"}",
+  "error": "Exit code 2\n M ../../../project-memory.json\n M ../../../state/idle-notif-cooldown.json\n M ../../../../README.md\n M ../../../../context_lint/cli.py\n M ../../../../context_lint/engine.py\n M ../../../../tests/fixtures/baseline/baseline.v1.json\n M ../../../../tests/test_baseline_cli.py\n M ../../../../tests/test_cli.py\n?? ../\n?? ../../../state/agent-replay-595d3500-dfe6-427f-8792-0b318d0f865b.jsonl\n?? ../../../state/sessions/595d3500-dfe6-427f-8792-0b318d0f865b/\n?? ../../../../context_lint/config_fil...",
+  "timestamp": "2026-08-29T12:48:17.516Z",
+  "retry_count": 1
+}

@@ -1,0 +1,99 @@
+{
+  "updatedAt": "2026-08-29T12:47:06.411Z",
+  "missions": [
+    {
+      "id": "session:595d3500-dfe6-427f-8792-0b318d0f865b:none",
+      "source": "session",
+      "name": "none",
+      "objective": "Session mission",
+      "createdAt": "2026-08-29T12:28:09.270Z",
+      "updatedAt": "2026-08-29T12:47:06.411Z",
+      "status": "running",
+      "workerCount": 4,
+      "taskCounts": {
+        "total": 4,
+        "pending": 0,
+        "blocked": 0,
+        "inProgress": 1,
+        "completed": 3,
+        "failed": 0
+      },
+      "agents": [
+        {
+          "name": "general-purpose:a32e231",
+          "role": "general-purpose",
+          "ownership": "a32e2312041e728dc",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-08-29T12:29:17.024Z"
+        },
+        {
+          "name": "python-reviewer:a137812",
+          "role": "python-reviewer",
+          "ownership": "a137812059288d925",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-08-29T12:30:44.287Z"
+        },
+        {
+          "name": "general-purpose:a610c4e",
+          "role": "general-purpose",
+          "ownership": "a610c4e0f6a9d26ba",
+          "status": "running",
+          "currentStep": null,
+          "latestUpdate": null,
+          "completedSummary": null,
+          "updatedAt": "2026-08-29T12:32:46.775Z"
+        },
+        {
+          "name": "python-reviewer:ae25eb1",
+          "role": "python-reviewer",
+          "ownership": "ae25eb1b5283e2832",
+          "status": "done",
+          "currentStep": null,
+          "latestUpdate": "completed",
+          "completedSummary": null,
+          "updatedAt": "2026-08-29T12:47:06.411Z"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "session-stop:a137812059288d925:2026-08-29T12:30:44.287Z",
+          "at": "2026-08-29T12:30:44.287Z",
+          "kind": "completion",
+          "agent": "python-reviewer:a137812",
+          "detail": "completed",
+          "sourceKey": "session-stop:a137812059288d925"
+        },
+        {
+          "id": "session-start:a610c4e0f6a9d26ba:2026-08-29T12:32:46.775Z",
+          "at": "2026-08-29T12:32:46.775Z",
+          "kind": "update",
+          "agent": "general-purpose:a610c4e",
+          "detail": "started general-purpose:a610c4e",
+          "sourceKey": "session-start:a610c4e0f6a9d26ba"
+        },
+        {
+          "id": "session-start:ae25eb1b5283e2832:2026-08-29T12:45:27.098Z",
+          "at": "2026-08-29T12:45:27.098Z",
+          "kind": "update",
+          "agent": "python-reviewer:ae25eb1",
+          "detail": "started python-reviewer:ae25eb1",
+          "sourceKey": "session-start:ae25eb1b5283e2832"
+        },
+        {
+          "id": "session-stop:ae25eb1b5283e2832:2026-08-29T12:47:06.411Z",
+          "at": "2026-08-29T12:47:06.411Z",
+          "kind": "completion",
+          "agent": "python-reviewer:ae25eb1",
+          "detail": "completed",
+          "sourceKey": "session-stop:ae25eb1b5283e2832"
+        }
+      ]
+    }
+  ]
+}
