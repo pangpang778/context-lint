@@ -60,8 +60,14 @@
   "hotPaths": [
     {
       "path": "context_lint/engine.py",
+      "accessCount": 16,
+      "lastAccessed": 1788005748341,
+      "type": "file"
+    },
+    {
+      "path": "context_lint/model.py",
       "accessCount": 14,
-      "lastAccessed": 1788004398641,
+      "lastAccessed": 1788005748637,
       "type": "file"
     },
     {
@@ -71,39 +77,33 @@
       "type": "file"
     },
     {
-      "path": "context_lint/model.py",
-      "accessCount": 12,
-      "lastAccessed": 1788004398726,
+      "path": "context_lint/cli.py",
+      "accessCount": 13,
+      "lastAccessed": 1788005932421,
       "type": "file"
     },
     {
       "path": "context_lint/rules/context_md.py",
-      "accessCount": 11,
-      "lastAccessed": 1788004445969,
+      "accessCount": 12,
+      "lastAccessed": 1788005537945,
       "type": "file"
     },
     {
       "path": "tests/test_cli.py",
-      "accessCount": 10,
-      "lastAccessed": 1788004278462,
+      "accessCount": 11,
+      "lastAccessed": 1788005487661,
       "type": "file"
     },
     {
       "path": "context_lint/scope.py",
-      "accessCount": 8,
-      "lastAccessed": 1788003858354,
+      "accessCount": 9,
+      "lastAccessed": 1788005284850,
       "type": "file"
     },
     {
       "path": "tests/test_integration.py",
       "accessCount": 8,
       "lastAccessed": 1788004299293,
-      "type": "file"
-    },
-    {
-      "path": "context_lint/cli.py",
-      "accessCount": 8,
-      "lastAccessed": 1788004398759,
       "type": "file"
     },
     {
@@ -150,8 +150,8 @@
     },
     {
       "path": "context_lint/__main__.py",
-      "accessCount": 4,
-      "lastAccessed": 1788003863349,
+      "accessCount": 5,
+      "lastAccessed": 1788005794934,
       "type": "file"
     },
     {
@@ -167,9 +167,39 @@
       "type": "file"
     },
     {
+      "path": "context_lint/baseline.py",
+      "accessCount": 4,
+      "lastAccessed": 1788005931992,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_baseline.py",
+      "accessCount": 4,
+      "lastAccessed": 1788005947011,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_baseline_cli.py",
+      "accessCount": 4,
+      "lastAccessed": 1788005947034,
+      "type": "file"
+    },
+    {
       "path": "tests/test_scope.py",
       "accessCount": 3,
       "lastAccessed": 1787989657047,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_inline_ignore_e2e.py",
+      "accessCount": 3,
+      "lastAccessed": 1788005285189,
+      "type": "file"
+    },
+    {
+      "path": "tests/fixtures/inline_ignore/CONTEXT.md",
+      "accessCount": 3,
+      "lastAccessed": 1788005538285,
       "type": "file"
     },
     {
@@ -197,18 +227,6 @@
       "type": "file"
     },
     {
-      "path": "tests/test_inline_ignore_e2e.py",
-      "accessCount": 2,
-      "lastAccessed": 1788004403553,
-      "type": "file"
-    },
-    {
-      "path": "tests/fixtures/inline_ignore/CONTEXT.md",
-      "accessCount": 2,
-      "lastAccessed": 1788004407910,
-      "type": "file"
-    },
-    {
       "path": "tests/fixtures/inline_ignore/specs/a.md",
       "accessCount": 2,
       "lastAccessed": 1788004408305,
@@ -218,6 +236,12 @@
       "path": "tests/fixtures/inline_ignore/CLAUDE.md",
       "accessCount": 2,
       "lastAccessed": 1788004408703,
+      "type": "file"
+    },
+    {
+      "path": "tests/test_baseline_e2e.py",
+      "accessCount": 2,
+      "lastAccessed": 1788005742659,
       "type": "file"
     },
     {
@@ -237,6 +261,24 @@
       "accessCount": 1,
       "lastAccessed": 1787988659725,
       "type": "file"
+    },
+    {
+      "path": "tests/fixtures/baseline/CONTEXT.md",
+      "accessCount": 1,
+      "lastAccessed": 1788005667457,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1788005711737,
+      "type": "file"
+    },
+    {
+      "path": "tests",
+      "accessCount": 1,
+      "lastAccessed": 1788005940053,
+      "type": "directory"
     }
   ],
   "userDirectives": []

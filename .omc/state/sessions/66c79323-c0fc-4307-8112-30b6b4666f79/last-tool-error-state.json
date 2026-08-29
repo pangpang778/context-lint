@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"C:\\\\Users\\\\Administrator\\\\orca\\\\context-lint\\\\README.md\"}",
+  "error": "File does not exist. Note: your current working directory is C:\\Users\\Administrator\\orca\\context-lint.",
+  "timestamp": "2026-08-29T12:11:27.831Z",
+  "retry_count": 1
+}

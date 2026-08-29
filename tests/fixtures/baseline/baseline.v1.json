@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-29T12:14:49.159944+00:00",
+  "violations": [
+    {
+      "rule": "context-md/entry-format",
+      "file": "CONTEXT.md",
+      "message": "entry 'adoption（采用）' missing required label '已解决的歧义:'"
+    }
+  ]
+}
